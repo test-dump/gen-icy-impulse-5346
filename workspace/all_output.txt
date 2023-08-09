@@ -1,21 +1,22 @@
-Status code 404 Not Found is an HTTP response status code that indicates that the server could not find the requested resource. This might be because the resource does not exist, or because the server is configured not to fulfill the request for that resource.
+In software development, unit tests are specific pieces of code written to test the individual units of functionality of a software component.
+Here's how to create a pseudo test case for a 404 error:
 
-While a 404 error is often associated with a broken link on a website, it could be a result of a variety of issues such as:
+```python
+import requests
+import unittest
 
-1. The URL has been mistyped: If a user mistypes a URL, the server wont find the incorrect address as it doesn't exist.
-
-2. The website's files or resources have been moved or deleted: If a website administrator moves or deletes files and resources but fails to update the related URL, a 404 error will occur.
-
-3. The server is not functioning correctly: Even if the requested URL is correct, if the server is not functioning correctly or is having issues, a 404 error might be displayed.
-
-Following are some troubleshooting steps for a 404 error:
-
-- Refresh the page: A temporary issue with the website might cause a 404 error. Simple refreshing your browser might solve the problem.
+class Test404Page(unittest.TestCase):
   
-- Double-check the URL: Ensure the spelling, capitalization, and punctuation in the URL are correct. Some servers are case sensitive.
+  def test_invalid_page(self):
+    response = requests.get('http://example.com/nonexistentpage')
+    self.assertEqual(response.status_code, 404)
 
-- Clear your browser's cache and cookies: If you've visited the page before and it was relocated, you might be viewing the cached version of the page.
+if __name__ == '__main__':
+    unittest.main()
+```
 
-- Use a search engine: Use a search engine such as Google or Bing to find the correct URL, if it has been changed or updated.
+In this example, we are using Python's built-in 'unittest' module to create a test case. We define a test for an invalid page on a website which we expect to return a 404 error. 
 
-- Contact the website administrator: If none of the previous suggestions work, contact the site administrator, they should be able to tell you if the page you're looking for exists and provide you with the correct URL. 
+This test uses the `requests` library to send an HTTP request to a non-existing webpage in 'example.com'. The HTTP response is stored in the variable 'response'. The `status_code` attribute of the 'response' object should return 404, indicating that the requested URL was not found on the server.
+
+With these test cases, we can verify and ensure that the server is responding with the right HTTP status codes for nonexisting pages.
