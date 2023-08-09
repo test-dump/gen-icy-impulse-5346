@@ -1,0 +1,21 @@
+Status code 404 Not Found is an HTTP response status code that indicates that the server could not find the requested resource. This might be because the resource does not exist, or because the server is configured not to fulfill the request for that resource.
+
+While a 404 error is often associated with a broken link on a website, it could be a result of a variety of issues such as:
+
+1. The URL has been mistyped: If a user mistypes a URL, the server wont find the incorrect address as it doesn't exist.
+
+2. The website's files or resources have been moved or deleted: If a website administrator moves or deletes files and resources but fails to update the related URL, a 404 error will occur.
+
+3. The server is not functioning correctly: Even if the requested URL is correct, if the server is not functioning correctly or is having issues, a 404 error might be displayed.
+
+Following are some troubleshooting steps for a 404 error:
+
+- Refresh the page: A temporary issue with the website might cause a 404 error. Simple refreshing your browser might solve the problem.
+  
+- Double-check the URL: Ensure the spelling, capitalization, and punctuation in the URL are correct. Some servers are case sensitive.
+
+- Clear your browser's cache and cookies: If you've visited the page before and it was relocated, you might be viewing the cached version of the page.
+
+- Use a search engine: Use a search engine such as Google or Bing to find the correct URL, if it has been changed or updated.
+
+- Contact the website administrator: If none of the previous suggestions work, contact the site administrator, they should be able to tell you if the page you're looking for exists and provide you with the correct URL. 
